@@ -4,7 +4,6 @@ import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.handler.IJobHandler;
 import com.xxl.job.core.handler.annotation.JobHandler;
 import com.xxl.job.core.log.XxlJobLogger;
-import groovy.util.logging.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
@@ -21,13 +20,13 @@ import java.util.concurrent.TimeUnit;
  *
  * @author xuxueli 2015-12-19 19:43:36
  */
-@JobHandler(value = "demoJobHandler")
+@JobHandler(value = "demoJobHandler1")
 @Component
-public class DemoJobHandler extends IJobHandler {
+public class Demo2JobHandler extends IJobHandler {
 
     @Override
     public ReturnT<String> execute(String param) throws Exception {
-        System.err.println("1号："+Thread.currentThread().getName());
+        System.err.println("2号："+Thread.currentThread().getName());
         return SUCCESS;
     }
 
