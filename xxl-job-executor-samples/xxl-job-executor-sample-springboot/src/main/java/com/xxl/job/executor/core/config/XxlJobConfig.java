@@ -38,6 +38,8 @@ public class XxlJobConfig {
 
     @Value("${xxl.job.executor.logretentiondays}")
     private int logRetentionDays;
+    @Value("${xxl.job.executor.heartbeat}")
+    private int heartbeat;
 
 
     @Bean(initMethod = "start", destroyMethod = "destroy")
@@ -51,7 +53,7 @@ public class XxlJobConfig {
         xxlJobExecutor.setAccessToken(accessToken);
         xxlJobExecutor.setLogPath(logPath);
         xxlJobExecutor.setLogRetentionDays(logRetentionDays);
-        xxlJobExecutor.setHeartbeat(10);
+        xxlJobExecutor.setHeartbeat(heartbeat);
         return xxlJobExecutor;
     }
 
