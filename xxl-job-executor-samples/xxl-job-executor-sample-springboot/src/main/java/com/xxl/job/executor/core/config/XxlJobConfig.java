@@ -51,7 +51,7 @@ public class XxlJobConfig {
         xxlJobExecutor.setAccessToken(accessToken);
         xxlJobExecutor.setLogPath(logPath);
         xxlJobExecutor.setLogRetentionDays(logRetentionDays);
-
+        xxlJobExecutor.setHeartbeat(10);
         return xxlJobExecutor;
     }
 
